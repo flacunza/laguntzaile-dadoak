@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <link rel="manifest" href="ld.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>Laguntzaile-dadoak</title>
     <link rel="stylesheet" href="css/le.css">
@@ -14,12 +15,12 @@
 			scope: './'
 		});
 	}
-	const LE = new LaguntzaileDadoak({
+	const LD = new LaguntzaileDadoak({
 		target: "dice",
 		dataSource: "data/data.json"
 	});
 	window.onload = function () {
-		LE.init();
+		LD.init();
 	};
     </script>
 </body>
