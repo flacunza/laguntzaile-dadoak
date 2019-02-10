@@ -167,7 +167,7 @@ LaguntzaileDadoak.classNames = {
 		self.updateSection(section, key, /^......l/, LaguntzaileDadoak.classNames.PAST);
 		var text;
 		if (/^..00/.test(key)) {
-			text = self.getNork(/^....(..)/.exec(key)[1]);
+			text = self.getNor(/^(..)/.exec(key)[1]);
 		}
 		else {
 			text = self.getNori(/^..(..)/.exec(key)[1]);
@@ -180,7 +180,7 @@ LaguntzaileDadoak.classNames = {
 		const section = self.get3rdElementSection();
 		section.classList.remove(LaguntzaileDadoak.classNames.ACTIVE);
 		setTimeout(function () {
-			self.updateSection(section, key, /^....[^0][^0]/, LaguntzaileDadoak.classNames.ACTIVE);
+			self.updateSection(section, key, /^[^0][^0][^0][^0][^0][^0]/, LaguntzaileDadoak.classNames.ACTIVE);
 		});
 		self.updateSection(section, key, /^......l/, LaguntzaileDadoak.classNames.PAST);
 		section.innerHTML = self.getNor(/^(..)/.exec(key)[1]);
