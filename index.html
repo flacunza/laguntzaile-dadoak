@@ -24,18 +24,16 @@
 	};
 	
 	if (navigator.serviceWorker) {
-
-            navigator.serviceWorker.register('service-worker.js', {
-                scope: './'
-            }).then(
-                function (reg) {
-                    console.log(reg.scope, 'register');
-                },
-                function (reason) {
-                    console.error('Could not register service worker: ' + reason);
-                }
-            );
-        }
+		navigator.serviceWorker.register('service-worker.js', {
+			scope: './'
+		}).then(
+			function (reg) {
+				console.log(reg.scope, 'register');
+			},
+			function (reason) {
+				console.error('Could not register service worker: ' + reason);
+			}
+		);
 	}
     </script>
 </body>
