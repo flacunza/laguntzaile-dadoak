@@ -90,7 +90,7 @@ html,body,.ld-dice {
 	width: 100%;
 	height: 25vh;
 	text-align: center;
-	font-size: 16vw;
+	font-size: 16vmin;
 	font-weight: bold;
 	animation: fadein 0.3s;
 }
