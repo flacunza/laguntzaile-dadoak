@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Laguntzaile-dadoak</title>
+    <link rel="stylesheet" href="css/le.css">
+</head>
+<body>
+    <article id="dice"></article>
+	<script type="text/javascript" src="js/laguntzaile-dadoak.js"></script>
+    <script type="text/javascript">
+	if (false && navigator.serviceWorker) {
+		navigator.serviceWorker.register('service-worker.js', {
+			scope: './'
+		});
+	}
+	const LE = new LaguntzaileDadoak({
+		target: "dice",
+		dataSource: "data/data.json"
+	});
+	window.onload = function () {
+		LE.init();
+	};
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+html,body,.ld-dice {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.ld-dice {
+	position: relative;
+	transition: opacity 0.3s;
+}
+
+.ld-element,.ld-mode {
+	position: absolute;
+	opacity: 0;
+}
+
+.ld-element.ld-active,.ld-mode.ld-active {
+	display: block;
+	opacity: 1;
+	animation: fadein 0.5s;
+}
+
+.ld-element {
+	width: 100%;
+	height: 25vh;
+	font-size: 10vh;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.ld-element.ld-past {
+	font-family: serif;
+	font-style: italic;
+}
+
+.ld-1st-element {
+	top: 25vh;
+}
+
+.ld-2nd-element {
+	top: 50vh;
+}
+
+.ld-3rd-element {
+	top: 75vh;
+}
+
+.ld-mode {
+	position: absolute;
+	top: 50vh;
+	width: 100%;
+	height: 25vh;
+	font-size: 8vh;
+	font-family: sans-serif;
+}
+
+.ld-mode:before {
+	position: absolute;
+	content: '(nolakoa)';
+	width: 100%;
+	text-align: center;
+	font-style: italic;
+}
+
+.ld-mode.ld-nola:before {
+	content: '(nola)';
+}
+
+.ld-tense {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 20vw;
+	height: 20vh;
+	font-size: 10vmin;
+}
+
+.ld-term {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 25vh;
+	text-align: center;
+	font-size: 16vw;
+	font-weight: bold;
+	animation: fadein 0.3s;
+}
+
+.ld-guessing .ld-term {
+	display: none;
+}
