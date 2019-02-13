@@ -42,10 +42,9 @@ html,body,.ld-dice {
 }
 
 .ld-mode {
-	position: absolute;
-	top: 50vh;
 	width: 100%;
-	height: 25vh;
+	display: none;
+	height: 20vh;
 	font-size: 8vh;
 	font-family: sans-serif;
 }
@@ -56,6 +55,10 @@ html,body,.ld-dice {
 	width: 100%;
 	text-align: center;
 	font-style: italic;
+}
+
+.le-mode.ld-active {
+	display: block;
 }
 
 .ld-mode.ld-nola:before {
