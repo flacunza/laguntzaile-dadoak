@@ -94,7 +94,7 @@ LaguntzaileDadoak.classNames = {
 			case '1p':
 				return 'gu';
 			case '2p':
-				return 'zue';
+				return 'zuek';
 			case '3p':
 				return 'haiek';
 			default:
