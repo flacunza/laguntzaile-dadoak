@@ -41,12 +41,13 @@ LaguntzaileDadoak.classNames = {
 			self._3rdElementSection.classList.add(LaguntzaileDadoak.classNames.ELEMENT);
 			self._3rdElementSection.classList.add(LaguntzaileDadoak.classNames.THIRD_ELEMENT);
 			self.target.appendChild(self._3rdElementSection);
-			self._tenseSection = document.createElement('section');
-			self._tenseSection.classList.add(LaguntzaileDadoak.classNames.TENSE);
-			self.target.appendChild(self._tenseSection);
 			self._modeSection = document.createElement('section');
 			self._modeSection.classList.add(LaguntzaileDadoak.classNames.MODE);
 			self.target.appendChild(self._modeSection);
+			self._tenseSection = document.createElement('section');
+			self._tenseSection.classList.add(LaguntzaileDadoak.classNames.TENSE);
+			self._tenseSection.innerHTML = "(lehenaldia)";
+			self.target.appendChild(self._tenseSection);
 			
 			self.target.addEventListener('click', function () {
 				self.nextStep();
@@ -188,7 +189,7 @@ LaguntzaileDadoak.classNames = {
 
 	LaguntzaileDadoak.prototype.updateTenseSection = function (key) {
 		const self = this;
-		self.updateSection(self.getTenseSection(), key, /l$|l0$|l1$/, LaguntzaileDadoak.classNames.PAST);
+		self.updateSection(self.getTenseSection(), key, /l$|l0$|l1$/, LaguntzaileDadoak.classNames.ACTIVE);
 	};
 
 	LaguntzaileDadoak.prototype.updateModeSection = function (key) {
